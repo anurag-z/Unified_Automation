@@ -1,4 +1,4 @@
-package org.Testcases;
+package org.APITestcases;
 
 import com.relevantcodes.extentreports.LogStatus;
 import org.Base.Base_Test;

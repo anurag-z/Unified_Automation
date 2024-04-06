@@ -1,10 +1,8 @@
-package org.Testcases;
+package org.APITestcases;
 
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.relevantcodes.extentreports.LogStatus;
 import io.restassured.response.Response;
 
@@ -15,7 +13,6 @@ import org.UI_Selenium.DriverManager;
 import org.testng.annotations.Test;
 import org.UtilitiesAPI.*;
 
-import java.io.Reader;
 import java.util.HashMap;
 
 import static org.Global.GlobalData.envConfig;

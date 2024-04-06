@@ -15,7 +15,7 @@
   <class name="org.UITestcases.Login_Tests"></class>
   <class name="org.UITestcases.AddtoCart_Tests"></class>
   <class name="org.UITestcases.MoreOptions_Tests"></class>
-<!--  <class name="org.Testcases.Testing"></class>-->
+<!--  <class name="org.APITestcases.Testing"></class>-->
 </classes>
   </test> <!-- _Instance_1 -->
 </suite> <!-- Tests -->

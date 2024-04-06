@@ -1,4 +1,4 @@
-package org.Testcases;
+package org.APITestcases;
 
 
 import org.json.simple.JSONArray;
