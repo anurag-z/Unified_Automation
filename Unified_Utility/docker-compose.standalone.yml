@@ -1,0 +1,8 @@
+version: "3"
+services:
+  seleniummvn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./Extent:/src/Extent
