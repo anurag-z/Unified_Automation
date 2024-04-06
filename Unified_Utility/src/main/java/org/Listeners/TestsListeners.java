@@ -46,6 +46,10 @@ public class TestsListeners implements ITestListener {
         ExtentTestManager.getTest().log(LogStatus.PASS, "pic" + img);
         ExtentTestManager.endtest();
     }
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Passed");
+        ExtentTestManager.endtest();
+
+
     }
 @Override
     public  void onTestFailure(ITestResult result)
