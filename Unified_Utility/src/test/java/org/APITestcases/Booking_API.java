@@ -13,6 +13,7 @@ import org.Extent.ExtentTestManager;
 import org.UI_Selenium.DriverManager;
 import org.testng.annotations.Test;
 import org.UtilitiesAPI.*;
+import org.testng.asserts.SoftAssert;
 
 import java.util.HashMap;
 
@@ -24,14 +25,20 @@ public class Booking_API extends Base_Test {
     DriverManager driverManager= DriverManager.getInstance();
 
 
- /*   @Test(groups = "api")
-    public void Getbooking()
+    @Test(groups = "api")
+    public void Checkhealth()
     {
         System.out.println("testing.......123"+tested);
 
+        Response rp= ResponseSpec.getRequestSpec(envConfig.getProperty("baseUri"),envConfig.getProperty("Healthcheck_endpoint"),new HashMap<>());
+        int status=rp.statusCode();
+        SoftAssert softAssert= new SoftAssert();
+        softAssert.assertEquals(201,status);
 
+        ExtentTestManager.getTest().log(LogStatus.INFO,rp.asString());
 
-    }*/
+        softAssert.assertAll();
+    }
 
     @Test(groups = "api")
     public void createBooking_POJO()
@@ -56,7 +63,10 @@ public class Booking_API extends Base_Test {
         ExtentTestManager.getTest().log(LogStatus.INFO,"Body"+ requestBody);
         Response rs= ResponseSpec.postRequestionSpec(requestBody,envConfig.getProperty("baseUri"),envConfig.getProperty("Getbooking_endpoint"));
         ExtentTestManager.getTest().log(LogStatus.INFO,"Response Body"+ rs.asString());
+        SoftAssert softAssert= new SoftAssert();
 
+        softAssert.assertEquals(200,rs.statusCode());
+        softAssert.assertAll();
         System.out.println(rs.asString());
     }
     @Test(groups = "api")
@@ -80,7 +90,10 @@ public class Booking_API extends Base_Test {
         System.out.println(rs.asString());
         ExtentTestManager.getTest().log(LogStatus.INFO,rs.asString());
        // ExtentTestManager.getTest().log(LogStatus.PASS,rs.asString());
+        SoftAssert softAssert= new SoftAssert();
 
+        softAssert.assertEquals(200,rs.statusCode());
+        softAssert.assertAll();
 
 
 
@@ -102,7 +115,10 @@ public class Booking_API extends Base_Test {
         Response rp= ResponseSpec.getRequestSpec(envConfig.getProperty("baseUri"),envConfig.getProperty("Getbooking_endpoint"),new HashMap<>());
         ExtentTestManager.getTest().log(LogStatus.INFO,rp.asString());
         System.out.println(rp.asString());
+        SoftAssert softAssert= new SoftAssert();
 
+        softAssert.assertEquals(200,rp.statusCode());
+        softAssert.assertAll();
 
     }
 
