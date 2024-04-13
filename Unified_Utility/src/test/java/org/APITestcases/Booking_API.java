@@ -21,14 +21,11 @@ import static org.Global.GlobalData.envConfig;
 
 public class Booking_API extends Base_Test {
 
-    public static  final String tested= System.getProperty("tessadt","");
-    DriverManager driverManager= DriverManager.getInstance();
 
 
-    @Test(groups = "api")
+    @Test(groups = "api",description = "Check API Health")
     public void Checkhealth()
     {
-        System.out.println("testing.......123"+tested);
 
         Response rp= ResponseSpec.getRequestSpec(envConfig.getProperty("baseUri"),envConfig.getProperty("Healthcheck_endpoint"),new HashMap<>());
         int status=rp.statusCode();
@@ -40,10 +37,9 @@ public class Booking_API extends Base_Test {
         softAssert.assertAll();
     }
 
-    @Test(groups = "api")
+    @Test(groups = "api",description = "Create Booking using Pojo class")
     public void createBooking_POJO()
     {
-        System.out.println("testing.......123"+tested);
         Booking booking= new Booking();
         booking.setFirstname("testing");
         booking.setLastname("ingtest");
@@ -69,11 +65,9 @@ public class Booking_API extends Base_Test {
         softAssert.assertAll();
         System.out.println(rs.asString());
     }
-    @Test(groups = "api")
+    @Test(groups = "api",description = "Token generation using JSON Object")
     public void CreateToken()
     {
-        System.out.println("testing.......123"+tested);
-
 
 
         JsonObject js= new JsonObject();
@@ -102,10 +96,9 @@ public class Booking_API extends Base_Test {
 
 
 
-    @Test(groups = "api")
+    @Test(groups = "api",description = "Get booking details....")
     public void GetBooking()
     {
-        System.out.println("testing.......123"+tested);
 
 
         HashMap<String ,String>  query= new HashMap<>();
