@@ -24,10 +24,10 @@ jobs:
             - run: mvn --version
             - name: build with maven
               run: |
-                cd UNIFIED_AUTOMATION
+                cd Unified_Utility
                 mvn clean
             - name: Testcase execution
               run: |
-                cd UNIFIED_AUTOMATION
+                cd Unified_Utility
                 mvn clean test -Dmaven.test.failure.ignore=true -fae
   
