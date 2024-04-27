@@ -24,7 +24,7 @@ jobs:
             - run: mvn --version
             - name: build with maven
               run: |
-                cd Automation
+                cd UNIFIED_AUTOMATION
                 mvn clean
             - name: Testcase execution
               run: |
