@@ -18,7 +18,7 @@ public class TestngXmlCreation {
 
     public static  final String tested= System.getProperty("tested","");
 
-    public void createfile(String suitsename,String type,String listeners,String testname,String groups,String typeoftest) throws Exception {
+    public void createfile(String suitsename,String type,String listeners,String testname,String groups,String packages,String platform) throws Exception {
 
         XmlSuite suite = new XmlSuite();
         suite.setName(suitsename);
@@ -33,11 +33,11 @@ public class TestngXmlCreation {
 
         switch (type) {
             case "classes":
-                this.classes(typeoftest,test);
+                this.classes(packages,test);
                 break;
 
             case "package":
-                this.packages(typeoftest,test,groups);
+                this.packages(packages,test,groups);
                 break;
 
 
@@ -95,8 +95,6 @@ public class TestngXmlCreation {
 
         //   testClass.setName ("temp");
         test.setXmlClasses (Arrays.asList (new XmlClass[] { testClass}));
-
-
     }
 
     public void packages(String pckg,XmlTest test,String groups)
@@ -123,7 +121,7 @@ public class TestngXmlCreation {
     public static void main(String[] args) throws Exception {
         TestngXmlCreation txc= new TestngXmlCreation();
         System.out.println(packg);
-        // txc.createfile("Tests",Type,Listeners,"",group,packg);
+     //    txc.createfile("Tests",Type,Listeners,"",group,packg,platform);
       //    txc.createfile("Tests","package",Listeners,"",group,"org.Testcases");
 
 

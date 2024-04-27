@@ -10,6 +10,7 @@ import io.restassured.response.Response;
 import org.API_DTO.Booking;
 import org.Base.Base_Test;
 import org.Extent.ExtentTestManager;
+import org.Global.GlobalData;
 import org.UI_Selenium.DriverManager;
 import org.testng.annotations.Test;
 import org.UtilitiesAPI.*;
@@ -23,7 +24,7 @@ public class Booking_API extends Base_Test {
 
 
 
-    @Test(groups = "api",description = "Check API Health")
+    @Test(description = "Check API Health",groups = GlobalData.grouping.APIregression)
     public void Checkhealth()
     {
 
@@ -37,7 +38,7 @@ public class Booking_API extends Base_Test {
         softAssert.assertAll();
     }
 
-    @Test(groups = "api",description = "Create Booking using Pojo class")
+    @Test(description = "Create Booking using Pojo class",groups = GlobalData.grouping.APIregression)
     public void createBooking_POJO()
     {
         Booking booking= new Booking();
@@ -65,7 +66,7 @@ public class Booking_API extends Base_Test {
         softAssert.assertAll();
         System.out.println(rs.asString());
     }
-    @Test(groups = "api",description = "Token generation using JSON Object")
+    @Test(description = "Token generation using JSON Object",groups = GlobalData.grouping.APIregression)
     public void CreateToken()
     {
 
@@ -96,7 +97,7 @@ public class Booking_API extends Base_Test {
 
 
 
-    @Test(groups = "api",description = "Get booking details....")
+    @Test(description = "Get booking details....",groups = GlobalData.grouping.APIregression)
     public void GetBooking()
     {
 

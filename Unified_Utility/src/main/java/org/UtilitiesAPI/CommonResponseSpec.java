@@ -27,7 +27,7 @@ public class CommonResponseSpec {
     public static Response GetRequest(RequestSpecification rs,String baseuri,String basepath)
     {
         Response rp= rs.relaxedHTTPSValidation().when().filters(new RequestLoggingFilter()).baseUri(baseuri).basePath(basepath).
-                    get().then().extract().response();
+                    get().then().assertThat().extract().response();
         return  rp;
     }
 }

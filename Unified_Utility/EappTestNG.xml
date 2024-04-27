@@ -4,18 +4,19 @@
   <listeners>
     <listener class-name="org.Listeners.SuiteListeners"/>
   </listeners>
-  <test thread-count="1" name="_Instance_1" preserve-order="false" parallel="classes">
+  <test thread-count="3" name="_Instance_1" preserve-order="false" parallel="classes">
 
-   <!-- <groups>
+    <groups>
       <run>
-        <include name="web"/>
+        <include name="regression"/>
+
       </run>
-    </groups>-->
+    </groups>
 <classes>
   <class name="org.UITestcases.Login_Tests"></class>
   <class name="org.UITestcases.AddtoCart_Tests"></class>
   <class name="org.UITestcases.MoreOptions_Tests"></class>
-<!--  <class name="org.APITestcases.Testing"></class>-->
+  <class name="org.APITestcases.Booking_API"></class>
 </classes>
   </test> <!-- _Instance_1 -->
 </suite> <!-- Tests -->

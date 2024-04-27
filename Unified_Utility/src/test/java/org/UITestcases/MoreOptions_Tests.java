@@ -1,6 +1,7 @@
 package org.UITestcases;
 
 import org.Base.Base_Test;
+import org.Global.GlobalData;
 import org.Pages.Additems;
 import org.Pages.Login;
 import org.Pages.MoreOptions;
@@ -12,7 +13,7 @@ public class MoreOptions_Tests extends Base_Test {
     Login login= Login.getInstance();
     Additems additems= Additems.getInstance();
     MoreOptions moreOptions= MoreOptions.getInstance();
-    @Test(description = "Check options in left nav bar")
+    @Test(description = "Check options in left nav bar",groups = GlobalData.grouping.regression)
     public void Aboutus() throws InterruptedException, IOException {
         login.Login();
        moreOptions.checkmoreoptionlist();

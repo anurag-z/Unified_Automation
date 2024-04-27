@@ -22,12 +22,12 @@ public class Login_Tests  extends Base_Test {
     Additems additems= Additems.getInstance();
     MoreOptions moreOptions= MoreOptions.getInstance();
 
-    @Test(description = "Login Test")
+    @Test(description = "Login Test",groups = GlobalData.grouping.regression)
     public void login() throws InterruptedException, IOException {
         login.Login();
 
     }
-    @Test(groups = GlobalData.grouping.login ,description = "End to End Test")
+    @Test(groups = GlobalData.grouping.regression ,description = "End to End Test")
     public void Endtoend() throws InterruptedException, IOException {
         login.Login();
         additems.Addcarts();

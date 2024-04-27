@@ -6,7 +6,7 @@ public class GlobalData {
 
 
     public static final String Listeners= System.getProperty("Listeners","org.Listeners.SuiteListeners");
-    public static final String group= System.getProperty("group","");
+    public static final String group= System.getProperty("group","regression");
     public static final String packg= System.getProperty("package","");
     public static final String Type= System.getProperty("Type","classes");
     public static final String platform= System.getProperty("platform","web");
@@ -20,6 +20,9 @@ public class GlobalData {
     public static final class grouping{
 
         public static final String login= "login";
+        public static final String regression= "regression";
+        public static final String APIregression= "APIregression";
+
     }
 
 
