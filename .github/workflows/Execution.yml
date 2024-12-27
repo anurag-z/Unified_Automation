@@ -39,7 +39,7 @@ jobs:
                 ls
                 pwd
               if: always()
-            - uses: actions/upload-artifact@v2
+            - uses: actions/upload-artifact@v3.1.2
               with:
                 name: test-report
                 path: "/home/runner/work/Unified_Automation/Unified_Automation/Unified_Utility/Extent/Teststst.html"
