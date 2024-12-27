@@ -31,6 +31,14 @@ jobs:
                 cd Unified_Utility
                 mvn clean test -Dmaven.test.failure.ignore=true -fae
             - name: upload Report
+              run: |
+                ls
+                cd Unified_Utility
+                ls
+                cd Extent
+                ls
+                pwd
+              if: always()
             - uses: actions/upload-artifact@v3.1.2
               with:
                 name: test-report
