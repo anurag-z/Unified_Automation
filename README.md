@@ -14,6 +14,8 @@ Supports UI Testing and API testing based on Tags and Grouping at Testcase Level
 
 This Framework will create extent report and to make it Thread safe we have used ThreadLocal for managing Parallel execution.
 
+![Extent](https://github.com/user-attachments/assets/e95dc66d-1207-4db6-adcb-401d53c2401c)
+
 ## 4.Docker Integration 
 
 Create a custom Image and Load the image in an container by passing the runtime cmd for execution
