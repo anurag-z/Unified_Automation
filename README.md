@@ -1,6 +1,22 @@
-# Unified_Automation
+# Unified_Automation with support of parallel Execution
 
 Unified Automation is a test automation framework that combines Selenium for web UI automation and API automation. This project includes a suite of tests for testing the application's functionality across different layers.
+
+## 1.TestNG Parallel Test Execution
+
+Creation of XML File at runtime based on MVN cmd Argument and Thread count
+
+## 2.UI Testing and API Testing
+
+Supports UI Testing and API testing based on Tags and Grouping at Testcase Level and Support Parallel Execution.
+
+## 3.Extent Report integration For UI and API Testing
+
+This Framework will create extent report and to make it Thread safe we have used ThreadLocal for managing Parallel execution.
+
+## 4.Docker Integration 
+
+Create a custom Image and Load the image in an container by passing the runtime cmd for execution
 
 Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
